@@ -100,11 +100,13 @@ if( is_home() || is_archive() || is_search()) {	?>
 						</div> <!-- /post-meta -->
 					</div>
 				</article>
-				<?php endwhile; ?>				
+				<?php endwhile; ?>
+				<div class="content-container">				
 				<div id="pagination" class="clearfix">
 					<div class="past-page"><?php previous_posts_link( 'Newer &raquo;' ); ?></div>
 					<div class="next-page"><?php next_posts_link( ' &laquo; Older' ); ?></div>
 				</div><!-- /pagintation -->
+				</div>
 				<?php else : ?>
 				<article class="post error">
 					<?php if(is_search()) { ?>
@@ -121,8 +123,7 @@ if( is_home() || is_archive() || is_search()) {	?>
 /*-----------------------------------------------------------------------------------*/	
 if( is_single() ) { ?>							
 	<?php if ( have_posts() ) : ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php if(has_post_thumbnail()) { 
+		<?php while ( have_posts() ) : the_post(); 
 				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 				<div class="featured-image" style="background-image:url(<?php echo"$feat_image"; ?>);">
 					<img class="logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/featured-image-logo.png" alt=""/>
@@ -141,16 +142,7 @@ if( is_single() ) { ?>
 		 				
 		 			</div>
 				</div>
-			<?php } else { ?>
-				<div class="container">
-					<p class="feat-title-nf">
-						<?php the_title() ?>
-					</p>
-		 			<div class="feat-subtitle-nf">
-		 				<?php if($post->post_excerpt)  the_excerpt(); ?>
-		 			</div>
-				</div>
-			<?PHP } ?>	
+
 				<div style="clear:both;"></div>				
 				<div class="container">
 					<div id="primary">
@@ -170,10 +162,13 @@ if( is_single() ) { ?>
 									</div><!--/post-meta -->
 								</div>
 							</article>
-							<div class="social-media">
+							<!-- //
+								UNCOMMENT TO ADD SOCIAL SHARE, IE TWITTER AND FACEVBOOK
+								<div class="social-media">
 								<a href="https://twitter.com/share" class="twitter-share-button" data-via="YOUR_TWITTER_USERNAME">Tweet</a>
 								<div class="fb-like" data-width="40" data-height="20" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false">
-								</div>
+								</div> 
+							// -->
 							</div>
 							<div class="content-container">
 							<div id="disqus_thread"></div>
@@ -264,7 +259,7 @@ if ( is_404() ) {
 <footer class="site-footer" role="contentinfo">
 	<div class="site-info container">
 		<?php do_action( 'break_credits' ); ?>		
-		Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a> and <a href="http://cristiandima.com/medium-less-a-free-minimalistic-wordpress-theme" target="_blank">Medium-less</a>
+		Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a> & <a href="#" target="_blank">Longread Journal Thene</a>
 	</div>
 </footer><!-- #colophon .site-footer -->
 

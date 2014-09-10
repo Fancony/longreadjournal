@@ -714,6 +714,7 @@ header nav li.current_page_item a {
 	background-attachment: fixed;
     max-height:100vh;
     position:relative;
+    background-color:#000;
 }
 .overlay {
 	position:relative;
@@ -722,19 +723,6 @@ header nav li.current_page_item a {
 	background-color:rgba(0,0,0,0.4);
   	background-position:center center;
     background-size:cover;
-}
-.featured-captions {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	padding: 10px 15px;
-	color: #fff;
-	z-index: 300;
-	background: rgba(0,0,0,0.5);
-	font-size: 9px;
-	text-transform: uppercase;
-	text-align: right;
-	max-width: 80%;
 }
 .featured-captions a {
 	color:#fff;
@@ -1465,12 +1453,6 @@ html[xmlns] .clearfix {
 	.responsive-logo {
 		display:inline;
 	}
-	.front-logo-top {	
-		display:inline !important;
-		z-index:1;
-		position: absolute;
-		margin:20px 0 0 20px;
-	}
   .r-logo-top {
 		display:inline !important;
 	}
@@ -1480,7 +1462,6 @@ html[xmlns] .clearfix {
 	p {
 		  max-width: 640px !important;
 		  margin:0 auto;
-		  padding:0 20px !important;
 	}
        
 }
