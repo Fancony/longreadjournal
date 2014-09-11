@@ -8,6 +8,7 @@ This means there's a lot of messy code and the theme will undergo many internal 
 - Download the file
 - Upload to server and install the theme
 - When installed set up the menus
+  There are two menu positions in the theme: one in the push/reveal sidebare and one on the frontpage
 
 ##### Shortcodes
 - [quote] ... [/quote]
