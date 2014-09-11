@@ -212,13 +212,18 @@ if(is_page()) {?>
 <div id="primary">
 	<div id="content" role="main">
 	<?php if ( have_posts() ) : ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-	<article class="post">					
-		<h1 class="title single-title"><?php the_title() ?></h1>						
-		<div class="the-content single-post">
-			<?php the_content(); ?>							
-			<?php wp_link_pages(); ?>
-		</div><!-- the-content -->						
+	<?php while ( have_posts() ) : the_post();
+				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+				<div class="featured-image" style="background-image:url(<?php echo"$feat_image"; ?>);">
+					<img class="logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/featured-image-logo.png" alt=""/>
+					<img class="r-logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/responsive_logo.png" alt=""/>
+					<div class="overlay">
+						<div class="title-container">
+		 					<div class="feat-title"><?php the_title() ?>
+		 					</div>
+		 				</div>			 				
+		 			</div>
+				</div>				
 	</article>
 	<?php endwhile; ?>
 <?php else : ?>

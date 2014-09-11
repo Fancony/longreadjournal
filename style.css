@@ -1460,10 +1460,9 @@ html[xmlns] .clearfix {
 		  max-width: 640px !important;
 		  margin:0 auto;
 	}
-       
 }
-@media screen and (orientation:landscape) {     
-.feat-title {
+@media only screen and (min-height : 0px) and (max-height : 769px) {
+	.feat-title {
 		padding-top:30% !important;
     } 
 }
