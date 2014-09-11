@@ -1462,3 +1462,8 @@ html[xmlns] .clearfix {
 	}
        
 }
+@media screen and (orientation:landscape) {     
+.feat-title {
+		top:50% !important;
+    } 
+}
