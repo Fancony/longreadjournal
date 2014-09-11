@@ -1,4 +1,5 @@
 The Longread Journal
+![screenshot](screenshot.png)
 ===
 
 #### Current state: BETA Version 0.96
