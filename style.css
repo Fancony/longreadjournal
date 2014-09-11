@@ -1,9 +1,9 @@
 /*
 Theme Name: Longread Journal
 Author: Jonas Masanga Fancony
-Author URI: http://fancony.com
-Description: Minimal single column theme excellent for written content. Inspired by minimal themes such as Medium-less, Less, Casper and Tiny. Built on Medium-less
-Version: v1.0.0
+Author URI: https://github.com/Fancony/longreadjournal
+Description: Minimal single column theme excellent for written content. Inspired by minimal themes such as Medium-less, Less, Casper and Tiny.
+Version: v0.9.5
 License: MIT
 */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600);
@@ -523,9 +523,6 @@ display: list-item;
 }
 
 blockquote {
-  margin: 0 0 0 -26px;
-  padding: 0px 0px 0px 23px;
-  border-left: solid 3px #FF0000;
   font-style: italic;
 }
 
