@@ -7,6 +7,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" type="text/css" href="<?PHP echo get_template_directory_uri() ?>/style.css" media="screen" />
+<link rel="apple-touch-icon" href="<?PHP echo get_template_directory_uri() ?>/images/responsive_logo.png" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
 <?php wp_head(); ?>
 <!-- Load scripts -->
 <script src="<?PHP echo get_template_directory_uri() ?>/js/less-1.7.4.min.js" type="text/javascript"></script>
@@ -57,7 +60,7 @@ if( is_home() || is_archive() || is_search()) {	?>
 
 <?PHP if( is_single() ) { ?>
 <div style="margin-top:20px;padding-right:20px;width:100%;position:absolute;z-index:10;clear:both !important;text-align:right;" id="st-trigger-effects">
-	<button style="background:url('<?PHP echo get_template_directory_uri() ?>/images/rmenuicon.png');width:40px;height:40px;z-index:10;border:none;" data-effect="st-effect-2"></button>
+	<button style="background:url('<?PHP echo get_template_directory_uri() ?>/images/<?PHP if(has_post_thumbnail()){?>rmenuicon.png<?}else{?>rmenuicon_blck.png<?}?>');width:40px;height:40px;z-index:10;border:none;" data-effect="st-effect-2"></button>
 </div>
 <?PHP } 
 /*-----------------------------------------------------------------------------------*/
@@ -121,19 +124,22 @@ if( is_home() || is_archive() || is_search()) {	?>
 /*-----------------------------------------------------------------------------------*/
 /* Post
 /*-----------------------------------------------------------------------------------*/	
-if( is_single() ) { ?>							
-	<?php if ( have_posts() ) : ?>
-		<?php while ( have_posts() ) : the_post(); 
-				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+if( is_single() ) {					
+	if ( have_posts() ) : 
+			while ( have_posts() ) : the_post(); 
+
+		if ( has_post_thumbnail() ) {
+				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
 				<div class="featured-image" style="background-image:url(<?php echo"$feat_image"; ?>);">
 					<img class="logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/featured-image-logo.png" alt=""/>
 					<img class="r-logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/responsive_logo.png" alt=""/>
 					<div class="overlay">
-						<div class="title-container">
-		 					<div class="feat-title"><?php the_title() ?>
+						<div class="title-container <?PHP lrj_align(); ?>">
+							<div class="feat-title">
+								<?php the_title() ?>
 		 					</div>
 		 				</div>	
-		 				<div class="sub-title-container">					
+						<div class="sub-title-container <?PHP lrj_align();;?>">								
 		 					<div class="feat-subtitle">
 		 						<?php if($post->post_excerpt)
   								$myExcerpt = get_the_excerpt();$tags = array("<p>", "</p>");$myExcerpt = str_replace($tags, "", $myExcerpt);echo $myExcerpt;?>
@@ -142,14 +148,32 @@ if( is_single() ) { ?>
 		 				
 		 			</div>
 				</div>
-
+		<? } else { ?>
+		<div class="featured-header">
+			<img class="logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/featured-image-logo_blck.png" alt=""/>
+			<img class="r-logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/responsive_logo.png" alt=""/>
+			<div class="title-container <?PHP lrj_align(); ?>">					
+				<div class="feat-title-nf">
+					<?php the_title() ?>
+				</div>
+			</div>
+				<div class="sub-title-container <?PHP lrj_align(); ?>">						
+		 			<div class="feat-subtitle-nf">
+		 				<?php if($post->post_excerpt)
+  						$myExcerpt = get_the_excerpt();$tags = array("<p>", "</p>");$myExcerpt = str_replace($tags, "", $myExcerpt);echo $myExcerpt;?>
+  					</div>
+		 		</div>
+		</div>
+		<? } ?>
 				<div style="clear:both;"></div>				
 				<div class="container">
 					<div id="primary">
 						<div id="content" role="main">					
 							<article class="post">
 								<div class="the-content single-post">
-									<?php the_content( 'Read full post...' ); ?>							
+									<div class="content-container">
+									<?php the_content( 'Read full post...' ); ?>	
+									</div>						
 									<?php wp_link_pages(); ?>
 								</div><!-- the-content -->
 								<div style="clear:both">
@@ -170,6 +194,7 @@ if( is_single() ) { ?>
 								</div> 
 							// -->
 							</div>
+							
 							<div class="content-container">
 							<div id="disqus_thread"></div>
     <script type="text/javascript">
