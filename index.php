@@ -73,18 +73,18 @@ if( is_home() || is_archive() || is_search()) {	?>
 	<div id="content" role="main">
 		<?php if ( have_posts() ) : ?>
 			<?php if(is_archive()) { ?>
-			<div class="content-container">
+			<div class="title-container">
 				<div class="cat-name"><?php less_current_category($cat); ?></div>
 			</div>
 				<?php }?>
 				<?php if(is_search()) { ?>
-			<div class="content-container">
+			<div class="title-container">
 				<div class="cat-name"><?php the_search_query(); ?></div>
 			</div>
 				<?php }?>
 				<?php while ( have_posts() ) : the_post(); ?>
 				<article class="post">
-					<div class="content-container">
+					<div class="title-container">
 						<h1 class="title">
 							<a href="<?php the_permalink(); ?>">
 								<?php the_title() ?>
@@ -178,7 +178,7 @@ if( is_single() ) {
 								</div><!-- the-content -->
 								<div style="clear:both">
 								</div>
-								<div class="content-container">
+								<div class="meta-container">
 									<div class="post-meta">
 										On <?php less_entry_date(); ?> in <?php less_post_category(); ?>
 										<?php lrj_article_reading_time(); ?>
@@ -195,7 +195,7 @@ if( is_single() ) {
 							// -->
 							</div>
 							
-							<div class="content-container">
+							<div class="comment-container">
 							<div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

@@ -929,6 +929,8 @@ article .meta .post-categories li {
   margin-bottom: 40px;
 }
 .meta-container {
+  max-width:640px;
+  margin:0 auto;
   color: #b3b3b1;
   font-size: 12px;
   font-family: Arial;
@@ -937,12 +939,17 @@ article .meta .post-categories li {
   letter-spacing:1px;
   text-decoration:bold;
 }
+.comment-container {
+  max-width:640px;
+  margin:0 auto;
+}
 /* Pagination */
 #pagination {
-  margin-bottom: 40px;
   width: 100%;
   padding-top: 30px;
   font-size: 18px;
+  margin:20px auto;
+  max-width:640px;
 }
 #pagination .past-page {
   float: right;
@@ -957,7 +964,6 @@ footer {
   font-size: 12px;
   color:#888888;
 }
-
 .social-media {
 	border-bottom: solid 1px #dededc;
   	border-top: solid 1px #dededc;
@@ -1002,21 +1008,28 @@ html[xmlns] .clearfix {
 }
 /* Used to keep other items in column */
 .content-container {
-  max-width: 640px;  
+
   margin: 0 auto;	
   position: relative;
 }
 .big-image {
 	height:100%;
 	width:100%;
-		background-position: center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	background-size:cover;
+	background-position:center center;
 	background-attachment: fixed;
     max-height:100vh;
     position:relative;
+    background-color:#000;
+}
+.big-image-scroll {
+	height:100%;
+	width:100%;
+	background-size:cover;
+	background-position:center center;
+    max-height:100vh;
+    position:relative;
+    background-color:#000;
 }
  .feat-quote {
   font-size: 2.4em;
@@ -1240,7 +1253,14 @@ html[xmlns] .clearfix {
 }
 /* Responsive design */
 @media only screen and (min-width : 700px) and (max-width : 1024px) {
-.featured-image {
+	.featured-image {
+	    display:block;
+		background-attachment: scroll !important;
+    	max-height:auto;
+    	position:relative;
+    	height:100%;
+	} 
+	.big-image {
 	    display:block;
 		background-attachment: scroll !important;
     	max-height:auto;
@@ -1300,13 +1320,6 @@ html[xmlns] .clearfix {
     .feat-subtitle {
 		padding-top:-20px !important;
     }
-	.big-image {
-		height:auto;
-		width:100% !important;
-		background-size:cover;
-		background-position:center;
-    	position:relative;
-	}
 	p {
 		  max-width: 640px !important;
 		  margin:0 auto; 
@@ -1321,6 +1334,13 @@ html[xmlns] .clearfix {
 		display:none;
 	}
 	.featured-image {
+	    display:block;
+		background-attachment: scroll !important;
+    	max-height:auto;
+    	position:relative;
+    	height:100%;
+	}
+	.big-image {
 	    display:block;
 		background-attachment: scroll !important;
     	max-height:auto;
@@ -1381,15 +1401,24 @@ html[xmlns] .clearfix {
     	border-top:none;
     	display:none !important;
 	}
-	.content-container  {
+	.title-container  {
 		  font-family: "Open Sans", Verdana, Arial, "sans-serif";  
 		  max-width: 640px !important;
 		  margin:0 auto;
 		  padding:0 20px !important;
 	}
+	.meta-container  {
+		  padding:0 20px !important;
+	}
+	.comment-container  {
+		  padding:0 20px !important;
+	}
 	.the-content h1, h2, h3, h4, h5, h6 {
 		  max-width: 640px !important;
 		  padding:0 20px 15px 20px !important;
+	}
+	#pagination {
+		  padding:0 20px !important;
 	}
 	p {
 		  max-width: 640px !important;
@@ -1436,15 +1465,10 @@ html[xmlns] .clearfix {
     	position:relative;
     	height:100%;
 	}   
-	.big-image {
-		width:100% !important;
-		background-position:center;
-    	position:relative;
-	}
 	.responsive-logo {
 		display:inline;
 	}
-  .r-logo-top {
+    .r-logo-top {
 		display:inline !important;
 	}
 	.logo-top {
