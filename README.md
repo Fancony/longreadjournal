@@ -3,7 +3,7 @@ The Longread Journal
 ![screenshot](screenshot.png)
 ===
 
-#### Current state: BETA Version 0.96
+#### Current state: BETA Version 0.96.5
 This means there's a lot of messy code and the theme will undergo many internal changes. I will not change the frontend layout.
 
 ### Wordpress Install And Use Instructions
@@ -14,8 +14,9 @@ This means there's a lot of messy code and the theme will undergo many internal 
 
 ##### Shortcodes
 - [quote] ... [/quote]
+- [big-image] ... [/big-image]
 
-Shortcodes in the works: Fact sidebar, parallax image in post and full screen (cover) image in post.
+A lot more Shortcodes in the works..
 
 The theme has no comment template installed and the code comes with DISQUS coded directly into the theme. Go to discus and sign up. Insert your username in the code to make it load. You can also insert facebook comments into the same area, but not through plugins.
 
