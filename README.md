@@ -14,7 +14,8 @@ This means there's a lot of messy code and the theme will undergo many internal 
 
 ##### Shortcodes
 - [quote] ... [/quote]
-- [big-image] ... [/big-image]
+- [big-image type="INSERT-TYPE"] IMAGE-URL [/big-image]
+  - The type can be either SCROLL or FIXED. Image will break if no type is specified. FIXED reverts to SCROLL on mobile devices   
 
 A lot more Shortcodes in the works..
 
