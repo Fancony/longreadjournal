@@ -289,7 +289,7 @@ if ( is_404() ) {
 <footer class="site-footer" role="contentinfo">
 	<div class="site-info container">
 		<?php do_action( 'break_credits' ); ?>		
-		Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>. <a href="https://github.com/Fancony/longreadjournal" target="_blank">Longread Journal Thene</a> by <a href="https://twitter.com/jfanc" target="_blank">@jfanc</a>
+		Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>.<br><a href="https://github.com/Fancony/longreadjournal" target="_blank">Longread Journal Theme</a> by <a href="https://twitter.com/jfanc" target="_blank">@jfanc</a>
 	</div>
 </footer><!-- #colophon .site-footer -->
 

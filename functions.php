@@ -104,18 +104,17 @@ add_theme_support('post-thumbnails');
 /*-----------------------------------------------------------------------------------*/
 /* Shortcodes
 /*-----------------------------------------------------------------------------------*/	
-	add_shortcode('quote', 'content_quote');
+add_shortcode('quote', 'content_quote');
 	function content_quote( $atts, $content = null ) {
 	return '<div class="quote-box-container"><div class="quote-box"><span>' . $content . '</span></div></div>';
-	}
-	add_shortcode('big-image', 'content_bigimage');
+}
+add_shortcode('big-image', 'content_bigimage');
 	function content_bigimage( $atts, $content = null ) {
-	return '<div class="big-image" style="background-image:url(' . $content . ');"></div>';
-	}
-	add_shortcode('big-image-scroll', 'content_bigimagescroll');
-	function content_bigimagescroll( $atts, $content = null ) {
-	return '<div class="big-image-scroll" style="background-image:url(' . $content . ');"></div>';
-	}
+	$a = shortcode_atts( array(
+		'type' => 'big-image',
+	), $atts );
+	return '<div class="big-image ' . esc_attr($a['type']) . '-image" style="background-image:url(' . $content . ');"></div>';
+}
 /*-----------------------------------------------------------------------------------*/
 /* Sidebars
 /*-----------------------------------------------------------------------------------*/		

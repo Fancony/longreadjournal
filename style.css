@@ -1012,24 +1012,21 @@ html[xmlns] .clearfix {
   margin: 0 auto;	
   position: relative;
 }
+/* Shortcode CSS */
 .big-image {
 	height:100%;
 	width:100%;
 	background-size:cover;
 	background-position:center center;
-	background-attachment: fixed;
     max-height:100vh;
     position:relative;
     background-color:#000;
 }
-.big-image-scroll {
-	height:100%;
-	width:100%;
-	background-size:cover;
-	background-position:center center;
-    max-height:100vh;
-    position:relative;
-    background-color:#000;
+.big-image.fixed-image {
+	background-attachment: fixed;
+}
+.big-image.scroll-image {
+	background-attachment: scroll;
 }
  .feat-quote {
   font-size: 2.4em;
@@ -1260,13 +1257,13 @@ html[xmlns] .clearfix {
     	position:relative;
     	height:100%;
 	} 
-	.big-image {
+	.big-image.fixed-image {
 	    display:block;
 		background-attachment: scroll !important;
-    	max-height:auto;
+    	max-height:auto !important;
     	position:relative;
     	height:100%;
-	}  
+	}
 	.logo-top {
 		display:none;
 	}
@@ -1340,13 +1337,13 @@ html[xmlns] .clearfix {
     	position:relative;
     	height:100%;
 	}
-	.big-image {
+	.big-image.fixed-image {
 	    display:block;
 		background-attachment: scroll !important;
-    	max-height:auto;
+    	max-height:auto !important;
     	position:relative;
     	height:100%;
-	}   
+	}
     .wp-caption-text{
       position:relative;
       left:0;
