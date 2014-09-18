@@ -674,13 +674,14 @@ header nav li.current_page_item a {
 }
 
 .wp-post-image {
-	width:100%;
+	max-width:640px;
+	margin:0 auto;
 	height:auto;		
 }
 .wp-caption {
-	width:100% !important;
+	width:640px !important;
 	position:relative;
-	margin-bottom:21px;
+	margin:21px auto;
 }
 
 .wp-caption-text {
