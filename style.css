@@ -674,12 +674,12 @@ header nav li.current_page_item a {
 }
 
 .wp-post-image {
-	max-width:640px;
+	max-width:640px !important;
 	margin:0 auto;
 	height:auto;		
 }
 .wp-caption {
-	width:640px !important;
+	max-width:640px !important;
 	position:relative;
 	margin:21px auto;
 }
@@ -1066,6 +1066,28 @@ html[xmlns] .clearfix {
 	line-height:130%;
 	color:#000;
 }
+ .review-box {
+ 	font-weight:700;
+	font-family: "Open Sans", Verdana, Arial, "sans-serif";
+ 	color:#FFF;
+	max-width: 640px;
+	margin:0 auto;
+	padding:20px;
+	margin-bottom:15px;
+}
+.review-box .rating {
+	float:left;
+	margin-right:20px;
+	max-width:200px;
+	font-size:1.8em;
+}
+.review-box .review-comment {
+	float:left;
+	max-width:400px;
+	font-size:1.8em;
+	text-align:left;
+}
+/* Logos and images */
 .desktop-logo {
 }
 .responsive-logo {
@@ -1328,6 +1350,16 @@ html[xmlns] .clearfix {
   	header nav {
     	float: none;
   	}
+.wp-post-image {
+	width:91.4% !important;
+	margin:0 auto;
+	height:auto;		
+}
+.wp-caption {
+	width:91.4% !important;
+	position:relative;
+	margin:21px auto;
+}
 	.logo-top {
 		display:none;
 	}
