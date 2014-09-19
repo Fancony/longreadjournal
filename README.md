@@ -3,7 +3,7 @@ The Longread Journal
 ![screenshot](screenshot.png)
 ===
 
-#### Current state: BETA Version 0.96.6
+#### Current state: BETA Version 0.97.0
 This means there's a lot of messy code and the theme will undergo many internal changes. I will not change the frontend layout.
 
 ### Wordpress Install And Use Instructions
@@ -15,7 +15,8 @@ This means there's a lot of messy code and the theme will undergo many internal 
 ##### Shortcodes
 - [quote] ... [/quote]
 - [big-image type="INSERT-TYPE"] IMAGE-URL [/big-image]
-  - The type can be either SCROLL or FIXED. Image will break if no type is specified. FIXED reverts to SCROLL on mobile devices   
+  - The type can be either SCROLL or FIXED. Image will break if no type is specified. FIXED reverts to SCROLL on mobile devices
+  - [review rating="NUMBER 1-10" header="REVIEW HEADER"]REVIEW SUM UP OR STATEMENT[/review]
 
 A lot more Shortcodes in the works..
 
