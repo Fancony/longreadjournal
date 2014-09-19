@@ -787,8 +787,8 @@ article .title {
   padding-top:40vh;
   line-height: 1;
   max-width: 640px;  
-  margin: 0 auto;	
-    font-family: "Open Sans", Verdana, Arial, "sans-serif";
+  margin: 0 auto;
+  font-family: "Open Sans", Verdana, Arial, "sans-serif";
 }
 .feat-subtitle {
   font-size: 1.2em;
@@ -1060,7 +1060,7 @@ html[xmlns] .clearfix {
 }
 .quote-box > span {
 	font-weight:700;
-	  font-family: "Open Sans", Verdana, Arial, "sans-serif";
+	font-family: "Open Sans", Verdana, Arial, "sans-serif";
 	hyphens:auto;
 	font-size:1.4em !important;
 	line-height:130%;
@@ -1077,15 +1077,22 @@ html[xmlns] .clearfix {
 }
 .review-box .rating {
 	float:left;
-	margin-right:20px;
+	border-right:2px solid #FFF;
+	padding-right:10px;
+	margin-right:10px;
 	max-width:200px;
-	font-size:1.8em;
+	font-size:2em;
 }
 .review-box .review-comment {
 	float:left;
 	max-width:400px;
 	font-size:1.8em;
 	text-align:left;
+}
+.review-detail {
+	font-size:1.2em;
+	padding-top:10px;
+	margin-top:10px;
 }
 /* Logos and images */
 .desktop-logo {
@@ -1409,8 +1416,15 @@ html[xmlns] .clearfix {
 		padding-left:20px;
     }
  	.feat-title-nf {
- 		font-size:3em;
+ 		font-size:2em;
   	}
+	.sub-title-container {
+		width:91.4% !important;
+		margin:0 auto;
+	}
+	.feat-subtitle-nf {
+ 		font-size: 1.3em;
+	}
 	.desktop-logo {
 		display:none;
   	}
@@ -1433,9 +1447,8 @@ html[xmlns] .clearfix {
 	}
 	.title-container  {
 		  font-family: "Open Sans", Verdana, Arial, "sans-serif";  
-		  max-width: 640px !important;
+			width:91.4% !important;
 		  margin:0 auto;
-		  padding:0 20px !important;
 	}
 	.meta-container  {
 		  padding:0 20px !important;
@@ -1451,9 +1464,8 @@ html[xmlns] .clearfix {
 		  padding:0 20px !important;
 	}
 	p {
-		  max-width: 640px !important;
+	width:91.4% !important;
 		  margin:0 auto;
-		  padding:0 20px !important;
 	}
 }
 
@@ -1463,11 +1475,6 @@ html[xmlns] .clearfix {
   	}
   	.r-logo-top {
 		display:inline !important;
-	}
-	p {
-		  max-width: 640px !important;
-		  margin:0 auto;
-		  padding:0 20px !important;
 	}
 }
 

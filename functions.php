@@ -115,6 +115,29 @@ add_shortcode('big-image', 'content_bigimage');
 	), $atts );
 	return '<div class="big-image ' . esc_attr($a['type']) . '-image" style="background-image:url(' . $content . ');"></div>';
 }
+add_shortcode('review', 'content_review');
+	function content_review( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'rating' => 'review',
+		'header' => 'review',
+	), $atts );
+	if($a['rating'] > 8) {
+	$color = '46b311';
+	}elseif($a['rating'] > 6) {
+	$color = 'b7ed14';
+	}elseif($a['rating'] > 4) {
+	$color = 'edb214';
+	}elseif($a['rating'] > 0) {
+	$color = 'ed1414';
+	}
+	return '<div class="review-box" style="background-color:#' . $color . '">
+				<div class="rating">' . esc_attr($a['rating']) . '/10</div>
+				<div class="review-comment">' . esc_attr($a['header']) . '</div>
+				<div style="clear:both;"></div>
+				<div class="review-detail">' . $content . '</div>
+				<div style="clear:both;"></div>
+			</div>';
+}
 /*-----------------------------------------------------------------------------------*/
 /* Sidebars
 /*-----------------------------------------------------------------------------------*/		
