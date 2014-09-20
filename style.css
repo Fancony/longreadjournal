@@ -1416,14 +1416,12 @@ html[xmlns] .clearfix {
     .feat-title-nf {
  		font-size:2em;
 		padding:100px 20px 0 20px;
+		position:relative;
     }
     .feat-subtitle {
 		padding-top:-20px !important;
 		padding-left:20px;
     }
- 	.feat-title-nf {
- 		font-size:2em;
-  	}
 	.sub-title-container {
 		width:91.4% !important;
 		margin:0 auto;
@@ -1457,10 +1455,10 @@ html[xmlns] .clearfix {
 		margin:0 auto;
 	}
 	.meta-container  {
-		padding:0 20px !important;
+		width:91.4% !important;
 	}
 	.comment-container  {
-		padding:0 20px !important;
+		width:91.4% !important;
 	}
 	.the-content h1, h2, h3, h4, h5, h6 {
 		max-width: 640px !important;
@@ -1474,16 +1472,6 @@ html[xmlns] .clearfix {
 		margin:0 auto;
 	}
 }
-
-@media (max-width: 480px) {
-  	article .the-content p {
-    	font-size: 18px;
-  	}
-  	.r-logo-top {
-		display:inline !important;
-	}
-}
-
 /* Retina displays addons */
 @media only screen and (-moz-min-device-pixel-ratio: 2), 
        only screen and (-o-min-device-pixel-ratio: 2/1), 
@@ -1528,5 +1516,19 @@ html[xmlns] .clearfix {
     } 
 	.feat-title-nf {
 		padding-top:30% !important;
+    } 
+}
+@media (max-width: 568px) {
+  	article .the-content p {
+    	font-size: 18px;
+  	}
+  	.r-logo-top {
+		display:inline !important;
+	}
+	.feat-title {
+		padding-top:150px !important;
+    } 
+	.feat-title-nf {
+		padding-top:150px !important;
     } 
 }
