@@ -558,13 +558,13 @@ hr {
 
 /* Links */
 a {
-  color: #000;
-  text-decoration: underline;
+  color: #333;
+  text-decoration: none;
 }
 a:hover,
 a:focus,
 a:active {
-  color: #000;
+  color: #333;
   text-decoration:underline;
 }
 
@@ -820,6 +820,9 @@ article .title {
 .title-container.centered {
   text-align:center;
 }
+.title-container.noshow {
+  display:none;
+}
 .sub-title-container {
   max-width: 640px;  
   margin: 0 auto;	
@@ -828,6 +831,9 @@ article .title {
 }
 .sub-title-container.centered {
   text-align:center;
+}
+.sub-title-container.noshow {
+  display:none;
 }
 article .title.single-title{
   font-size: 50px;
@@ -862,14 +868,14 @@ article .post-meta a:hover {
   text-decoration:underline;
 }
 article .the-content h1, h2, h3, h4 {
-  padding: 0px 0px 15px 0px;
+  padding: 20px 0px 15px 0px;
 }
 article .the-content h1 {
   font-size:3em;
 }
 article .the-content h2 {
 	font-size:2.5em;
-		letter-spacing:-.04em;
+	letter-spacing:-.04em;
 	line-height:110%;
 }
 article .the-content h3 {
@@ -1357,16 +1363,16 @@ html[xmlns] .clearfix {
   	header nav {
     	float: none;
   	}
-.wp-post-image {
-	width:91.4% !important;
-	margin:0 auto;
-	height:auto;		
-}
-.wp-caption {
-	width:91.4% !important;
-	position:relative;
-	margin:21px auto;
-}
+	.wp-post-image {
+		width:91.4% !important;
+		margin:0 auto;
+		height:auto;		
+	}
+	.wp-caption {
+		width:91.4% !important;
+		position:relative;
+		margin:21px auto;
+	}
 	.logo-top {
 		display:none;
 	}
@@ -1385,12 +1391,12 @@ html[xmlns] .clearfix {
     	height:100%;
 	}
     .wp-caption-text{
-      position:relative;
-      left:0;
-      top:0;    
-      text-align:left;
-      width:auto;
-      padding:5px 20px 5px 20px;
+     	position:relative;
+      	left:0;
+      	top:0;    
+      	text-align:left;
+      	width:auto;
+		padding:5px 20px 5px 20px;
 	}
  	.quote-box {
 		padding:0 0 0px 0px;
@@ -1446,26 +1452,26 @@ html[xmlns] .clearfix {
     	display:none !important;
 	}
 	.title-container  {
-		  font-family: "Open Sans", Verdana, Arial, "sans-serif";  
-			width:91.4% !important;
-		  margin:0 auto;
+		font-family: "Open Sans", Verdana, Arial, "sans-serif";  
+		width:91.4% !important;
+		margin:0 auto;
 	}
 	.meta-container  {
-		  padding:0 20px !important;
+		padding:0 20px !important;
 	}
 	.comment-container  {
-		  padding:0 20px !important;
+		padding:0 20px !important;
 	}
 	.the-content h1, h2, h3, h4, h5, h6 {
-		  max-width: 640px !important;
-		  padding:0 20px 15px 20px !important;
+		max-width: 640px !important;
+		width:91.4% !important;
 	}
 	#pagination {
-		  padding:0 20px !important;
+		padding:0 20px !important;
 	}
 	p {
-	width:91.4% !important;
-		  margin:0 auto;
+		width:91.4% !important;
+		margin:0 auto;
 	}
 }
 
