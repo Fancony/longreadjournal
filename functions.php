@@ -73,7 +73,8 @@ add_theme_support('post-thumbnails');
     	<label for="my_meta_box_select">Style</label>  
         <select name="my_meta_box_select" id="my_meta_box_select">  
         	<option value="standard" <?php selected( $selected, 'standard' ); ?>>Standard Title (left)</option>  
-            <option value="center" <?php selected( $selected, 'center' ); ?>>Centered Title</option>  
+            <option value="center" <?php selected( $selected, 'center' ); ?>>Centered Title</option>
+            <option value="noshow" <?php selected( $selected, 'noshow' ); ?>>Hide title</option>  
         </select>  
     </p>  
     <?php      
@@ -115,6 +116,19 @@ add_shortcode('big-image', 'content_bigimage');
 	), $atts );
 	return '<div class="big-image ' . esc_attr($a['type']) . '-image" style="background-image:url(' . $content . ');"></div>';
 }
+add_shortcode('info-box', 'content_infobox');
+	function content_infobox( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'bgcolor' => 'info-box',
+		'header' => 'info-box',
+	), $atts );
+	return '<div class="info-box" style="background-color:' . esc_attr($a['bgcolor']) . '">
+				<div class="info-box-header">' . esc_attr($a['header']) . '</div>
+				<div style="clear:both;"></div>
+				<div class="info-box-detail">' . $content . '</div>
+				<div style="clear:both;"></div>
+			</div>';
+}
 add_shortcode('review', 'content_review');
 	function content_review( $atts, $content = null ) {
 	$a = shortcode_atts( array(
@@ -152,6 +166,8 @@ $key = 'my_meta_box_select';
 $themeta = get_post_meta($post->ID, $key, TRUE);
 if($themeta == 'center') { 
 	$alignment ='centered';
+}elseif($themeta == 'noshow') { 
+	$alignment ='noshow';
 } else {
 	$alignment ='';
 }
