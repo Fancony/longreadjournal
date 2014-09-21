@@ -17,6 +17,7 @@ This means there's a lot of messy code and the theme will undergo many internal 
 - [big-image type="INSERT-TYPE"] IMAGE-URL [/big-image]
   - The type can be either SCROLL or FIXED. Image will break if no type is specified. FIXED reverts to SCROLL on mobile devices
 - [review rating="NUMBER 1-10" header="REVIEW HEADER"]REVIEW SUM UP OR STATEMENT[/review]
+- [info-box bgcolor="HTML COLOR CODE" header="HEADER"]Contents[/info-box]
 
 A lot more Shortcodes in the works..
 
