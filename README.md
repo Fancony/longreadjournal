@@ -3,7 +3,7 @@ The Longread Journal
 ![screenshot](screenshot.png)
 ===
 
-#### Current state: BETA Version 0.97.0
+#### Current state: Version 1.00
 This means there's a lot of messy code and the theme will undergo many internal changes. I will not change the frontend layout.
 
 ### Wordpress Install And Use Instructions
