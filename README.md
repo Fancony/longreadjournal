@@ -3,8 +3,8 @@ The Longread Journal
 ![screenshot](screenshot.png)
 ===
 
-#### Current state: Version 1.00
-This means there's a lot of messy code and the theme will undergo many internal changes. I will not change the frontend layout.
+#### Current state: Version 1.01
+In development and the theme will undergo many internal changes. I will not change the frontend layout or short codes.
 
 ### Wordpress Install And Use Instructions
 - Download the file
@@ -18,6 +18,8 @@ This means there's a lot of messy code and the theme will undergo many internal 
   - The type can be either SCROLL or FIXED. Image will break if no type is specified. FIXED reverts to SCROLL on mobile devices
 - [review rating="NUMBER 1-10" header="REVIEW HEADER"]REVIEW SUM UP OR STATEMENT[/review]
 - [info-box bgcolor="HTML COLOR CODE" header="HEADER"]Contents[/info-box]
+- [full-box bgcolor="HTML COLOR CODE" header="HEADER"]Contents[/full-box]
+  - Same as the info-box only this is full width and works great as a divider or breeak in the content. Example use could be to use big-image short code immediately after this short code to create a cool 'chapter break' in the article.
 
 A lot more Shortcodes in the works..
 
