@@ -14,10 +14,13 @@ In development and the theme will undergo many internal changes. I will not chan
 
 ##### Shortcodes
 - [quote] ... [/quote]
+  - Creates a quote slightly breaking the column with red vertical line to draw attention.
 - [big-image type="INSERT-TYPE"] IMAGE-URL [/big-image]
   - The type can be either SCROLL or FIXED. Image will break if no type is specified. FIXED reverts to SCROLL on mobile devices
 - [review rating="NUMBER 1-10" header="REVIEW HEADER"]REVIEW SUM UP OR STATEMENT[/review]
+  - Auto generates a color from green to red depending on the rating.
 - [info-box bgcolor="HTML COLOR CODE" header="HEADER"]Contents[/info-box]
+  - Creates a box of your choice of color. Great for creating an info box in the content. Could also be used to draw attention to other articles etc.
 - [full-box bgcolor="HTML COLOR CODE" header="HEADER"]Contents[/full-box]
   - Same as the info-box only this is full width and works great as a divider or breeak in the content. Example use could be to use big-image short code immediately after this short code to create a cool 'chapter break' in the article.
 
