@@ -113,6 +113,8 @@ add_shortcode('big-image', 'content_bigimage');
 	function content_bigimage( $atts, $content = null ) {
 	$a = shortcode_atts( array(
 		'type' => 'big-image',
+//		'caption' => 'big-image',
+//		'align' => 'big-image',
 	), $atts );
 	return '<div class="big-image ' . esc_attr($a['type']) . '-image" style="background-image:url(' . $content . ');"></div>';
 }
@@ -126,6 +128,19 @@ add_shortcode('info-box', 'content_infobox');
 				<div class="info-box-header">' . esc_attr($a['header']) . '</div>
 				<div style="clear:both;"></div>
 				<div class="info-box-detail">' . $content . '</div>
+				<div style="clear:both;"></div>
+			</div>';
+}
+add_shortcode('full-box', 'content_fullbox');
+	function content_fullbox( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'bgcolor' => 'full-box',
+		'header' => 'full-box',
+	), $atts );
+	return '<div class="full-box" style="background-color:' . esc_attr($a['bgcolor']) . '">
+				<div class="full-box-header">' . esc_attr($a['header']) . '</div>
+				<div style="clear:both;"></div>
+				<div class="full-box-detail">' . $content . '</div>
 				<div style="clear:both;"></div>
 			</div>';
 }

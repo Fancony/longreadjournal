@@ -1029,6 +1029,21 @@ html[xmlns] .clearfix {
     position:relative;
     background-color:#000;
 }
+/* 
+NOT USED ATM. UNCOMMENT FOR CAPTION WITH IN BIG-IMAGE SHORT CODE
+.big-image h2 {
+	width:100%;
+	top:60%;
+	text-align:center;
+  	font-size: 3em;
+  	font-weight: 800;
+  	color:#f4f4f4; 
+  	letter-spacing: -0.05em;
+ 	font-style: normal;
+ 	line-height: 1.1;
+  	text-shadow: 2px 2px #222;
+    font-family: "Open Sans", Verdana, Arial, "sans-serif";
+} */
 .big-image.fixed-image {
 	background-attachment: fixed;
 }
@@ -1048,7 +1063,7 @@ html[xmlns] .clearfix {
   line-height: 1.5;
   text-align:left;
   text-shadow: 2px 2px #444444;
-    font-family: "Open Sans", Verdana, Arial, "sans-serif";
+  font-family: "Open Sans", Verdana, Arial, "sans-serif";
 }
  .quote-box-container {
 	max-width:640px;
@@ -1091,6 +1106,30 @@ html[xmlns] .clearfix {
 }
 .info-box-detail {
 	font-weight:500;
+	letter-spacing:0.03em;
+}
+.full-box {
+	font-family: "Open Sans", Verdana, Arial, "sans-serif";
+ 	color:#FFF;
+	max-width: 100%;
+	margin:0 auto;
+	padding:20px;
+}
+.full-box a {
+ 	color:#FFF;
+ 	text-decoration:underline;
+}
+.full-box-header {
+	margin:0 auto;
+	max-width: 640px;
+	font-weight:700;
+	font-size:2em;
+	letter-spacing:-0.05em;
+}
+.full-box-detail {
+	margin:0 auto;
+	max-width: 640px;
+	font-weight:600;
 	letter-spacing:0.03em;
 }
  .review-box {

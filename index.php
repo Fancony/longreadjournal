@@ -58,7 +58,7 @@ if( is_home() || is_archive() || is_search()) {	?>
 </header><!-- #masthead .site-header -->
 <?php } ?>
 
-<?PHP if( is_single() ) { ?>
+<?PHP if( is_single() || is_page() ) { ?>
 <div style="margin-top:20px;padding-right:20px;width:100%;position:absolute;z-index:10;clear:both !important;text-align:right;" id="st-trigger-effects">
 	<button style="background:url('<?PHP echo get_template_directory_uri() ?>/images/<?PHP if(has_post_thumbnail()){?>rmenuicon.png<?}else{?>rmenuicon_blck.png<?}?>');width:40px;height:40px;z-index:10;border:none;" data-effect="st-effect-2"></button>
 </div>
@@ -238,25 +238,67 @@ if(is_page()) {?>
 	<div id="content" role="main">
 	<?php if ( have_posts() ) : ?>
 	<?php while ( have_posts() ) : the_post();
-				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+		if ( has_post_thumbnail() ) {
+				$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );?>
 				<div class="featured-image" style="background-image:url(<?php echo"$feat_image"; ?>);">
 					<img class="logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/featured-image-logo.png" alt=""/>
 					<img class="r-logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/responsive_logo.png" alt=""/>
 					<div class="overlay">
-						<div class="title-container">
-		 					<div class="feat-title"><?php the_title() ?>
+						<div class="title-container <?PHP lrj_align(); ?>">
+							<div class="feat-title">
+								<?php the_title() ?>
 		 					</div>
-		 				</div>			 				
+		 				</div>	
 		 			</div>
-				</div>				
-	</article>
-	<?php endwhile; ?>
-<?php else : ?>
-	<article class="post error">
-		<h1 class="404">Page not found (error 404)</h1>					 
-		<p>Don't know what you're looking for but it ain't here.</p>
-	</article>
-<?php endif; ?>
+				</div>
+		<? } else { ?>
+		<div class="featured-header">
+			<img class="logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/featured-image-logo_blck.png" alt=""/>
+			<img class="r-logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/responsive_logo.png" alt=""/>
+			<div class="title-container <?PHP lrj_align(); ?>">					
+				<div class="feat-title-nf">
+					<?php the_title() ?>
+				</div>
+			</div>
+		</div>
+		<? } ?>
+				<div style="clear:both;"></div>				
+				<div class="container">
+					<div id="primary">
+						<div id="content" role="main">					
+							<article class="post">
+								<div class="the-content single-post">
+									<div class="content-container">
+									<?php the_content( 'Read full post...' ); ?>	
+									</div>						
+									<?php wp_link_pages(); ?>
+								</div><!-- the-content -->
+								<div style="clear:both">
+								</div>
+								<div class="meta-container">
+									<div class="post-meta">
+										On <?php less_entry_date(); ?> in <?php less_post_category(); ?>
+										<?php lrj_article_reading_time(); ?>
+										<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link"> &sdot; ', '</span>' ); ?>			
+									</div><!--/post-meta -->
+								</div>
+							</article>
+							<!-- //
+								UNCOMMENT TO ADD SOCIAL SHARE, IE TWITTER AND FACEVBOOK
+								<div class="social-media">
+								<a href="https://twitter.com/share" class="twitter-share-button" data-via="YOUR_TWITTER_USERNAME">Tweet</a>
+								<div class="fb-like" data-width="40" data-height="20" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false">
+								</div> 
+							// -->
+							</div>
+<?php endwhile; ?>
+					<?php else : ?>
+					<article class="post error">
+						<h1 class="404">Page not found (error 404)</h1>					 
+				 		<p>Don't know what you're looking for but it ain't here.</p>
+					</article>
+
+					<?php endif; ?>
 <?php 
 } // end is_page(); ?>
 
