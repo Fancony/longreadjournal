@@ -3,7 +3,7 @@ The Longread Journal
 ![screenshot](screenshot.png)
 ===
 
-#### Current state: Version 1.01
+#### Current state: Version 1.02
 In development and the theme will undergo many internal changes. I will not change the frontend layout or short codes.
 
 ### Wordpress Install And Use Instructions
@@ -14,6 +14,8 @@ In development and the theme will undergo many internal changes. I will not chan
 
 The theme has no comment template installed and the code comes with DISQUS coded directly into the theme. Go to discus and sign up. Insert your username in the code to make it load. You can also insert facebook comments into the same area, but not through plugins.
 
+##### Theme Options
+- Header image control in Appearence -> Customize menu
 
 ##### Shortcodes
 - [quote] ... [/quote]
