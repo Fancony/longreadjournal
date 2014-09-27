@@ -3,7 +3,7 @@ Theme Name: Longread Journal
 Author: Jonas Masanga Fancony
 Author URI: https://github.com/Fancony/longreadjournal
 Description: Minimal fully responsive single column theme excellent for writing long essays, papers, reviews and longreads in general. Inspired by minimal themes such as Medium-less, Less, Casper and Tiny.
-Version: 1.01
+Version: 1.02
 License: MIT
 */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600);
@@ -600,7 +600,6 @@ header {
 	clear:both !important;
 	background-color: #FFF;
 	border-bottom:1px solid #333;
-	background:url('http://fancony.com/dev/epicfar/wp-content/uploads/2014/08/3273064578_649bf06787_o_2000px.jpg');
   background-position: right center;
   -webkit-background-size: cover;
   -moz-background-size: cover;

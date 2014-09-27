@@ -168,10 +168,17 @@ add_shortcode('review', 'content_review');
 			</div>';
 }
 /*-----------------------------------------------------------------------------------*/
-/* Sidebars
+/* Theme
 /*-----------------------------------------------------------------------------------*/		
-
-
+add_theme_support( 'custom-header' );
+$args = array(
+	'flex-width'    => true,
+	'width'         => 2000,
+	'flex-height'    => true,
+	'height'        => 1333,
+	'default-image' => get_template_directory_uri() . '/images/header.jpg',
+);
+add_theme_support( 'custom-header', $args );
 /*-----------------------------------------------------------------------------------*/
 /* Feat title alignment
 /*-----------------------------------------------------------------------------------*/		

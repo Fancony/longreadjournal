@@ -33,13 +33,13 @@
 /* Start theme header 
 /*-----------------------------------------------------------------------------------*/
 if( is_home() || is_archive() || is_search()) {	?>
-<header style="position:relative !important;" id="masthead" class="site-header" role="banner">
+<header style="background-image:url('<?php header_image(); ?>');position:relative !important;">
 <a href="<?php get_home_url(); ?>"><img class="front-logo-top" src="<?PHP echo get_template_directory_uri() ?>/images/responsive_logo.png" alt=""/></a>
 		<div id="brand">
 			<div id="site-title">
 				<a href="<?php get_home_url(); ?>"><img class="desktop-logo" src="<?PHP echo get_template_directory_uri() ?>/images/frontpagelogo.png" alt=""/></a>
 			</div>
-			<!-- NOT CURRENTLY USED. REMOVE ARROWS TO DISPLAY DESCRIPTION
+			<!-- NOT CURRENTLY USED. UNCOMMENT TO DISPLAY DESCRIPTION
 				<div id="site-description">
 				<?php echo get_bloginfo('description') ?>
 			</div> -->
