@@ -1069,9 +1069,9 @@ NOT USED ATM. UNCOMMENT FOR CAPTION WITH IN BIG-IMAGE SHORT CODE
 	position:relative;
 	margin:0 auto;
 }
- .quote-box {
+.quote-box {
 	width: 190px;
-	left: -40px;
+	left: -24px;
 	position:relative;
 	float:left;
 	border-left:5px solid #FF0000;
@@ -1085,6 +1085,20 @@ NOT USED ATM. UNCOMMENT FOR CAPTION WITH IN BIG-IMAGE SHORT CODE
 	font-size:1.4em !important;
 	line-height:130%;
 	color:#000;
+}
+.quote-box.big-quote {
+	width: 100%;
+}
+.quote-box.big-quote > span {
+	font-weight:800;
+	font-family: "Open Sans", Verdana, Arial, "sans-serif";
+	hyphens:auto;
+	font-size:1.6em !important;
+	line-height:130%;
+	color:#000;
+}
+.source-quote {
+font-size:1.2em;color:#777;margin-top:5px;font-family: "Open Sans", Verdana, Arial, "sans-serif";
 }
  .info-box {
 	font-family: "Open Sans", Verdana, Arial, "sans-serif";

@@ -109,6 +109,13 @@ add_shortcode('quote', 'content_quote');
 	function content_quote( $atts, $content = null ) {
 	return '<div class="quote-box-container"><div class="quote-box"><span>' . $content . '</span></div></div>';
 }
+add_shortcode('big-quote', 'content_bigquote');
+	function content_bigquote( $atts, $content = null ) {
+	$a = shortcode_atts( array(
+		'source' => 'big-quote',
+	), $atts );
+	return '<div class="quote-box-container"><div class="quote-box big-quote"><span>' . $content . '</span><br><div class="source-quote">' . esc_attr($a['source']) . '</div></div></div>';
+}
 add_shortcode('big-image', 'content_bigimage');
 	function content_bigimage( $atts, $content = null ) {
 	$a = shortcode_atts( array(
