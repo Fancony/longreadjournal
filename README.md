@@ -3,7 +3,7 @@ The Longread Journal
 ![screenshot](screenshot.png)
 ===
 
-#### Current state: Version 1.02
+#### Current state: Version 1.03
 In development and the theme will undergo many internal changes. I will not change the frontend layout or short codes.
 
 ### Wordpress Install And Use Instructions
@@ -20,6 +20,8 @@ The theme has no comment template installed and the code comes with DISQUS coded
 ##### Shortcodes
 - [quote] ... [/quote]
   - Creates a quote slightly breaking the column with red vertical line to draw attention.
+- [big-quote source="NAME"] ... [/big-quote]
+  - Creates a quote slightly breaking the column with red vertical line to draw attention. Spans the entire article. Prints the source below.
 - [big-image type="INSERT-TYPE"] IMAGE-URL [/big-image]
   - The type can be either SCROLL or FIXED. Image will break if no type is specified. FIXED reverts to SCROLL on mobile devices
 - [review rating="NUMBER 1-10" header="REVIEW HEADER"]REVIEW SUM UP OR STATEMENT[/review]
