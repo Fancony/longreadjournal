@@ -21,7 +21,7 @@ The theme has no comment template installed and the code comes with DISQUS coded
 - [quote] ... [/quote]
   - Creates a quote slightly breaking the column with red vertical line to draw attention.
 - [big-quote source="NAME"] ... [/big-quote]
-  - Creates a quote slightly breaking the column with red vertical line to draw attention. Spans the entire article. Prints the source below.
+  - Creates a quote slightly breaking the column with red vertical line to draw attention. Spans the entire article. Prints the source below. Source is optional, leave all of it out if no source.
 - [big-image type="INSERT-TYPE"] IMAGE-URL [/big-image]
   - The type can be either SCROLL or FIXED. Image will break if no type is specified. FIXED reverts to SCROLL on mobile devices
 - [review rating="NUMBER 1-10" header="REVIEW HEADER"]REVIEW SUM UP OR STATEMENT[/review]
